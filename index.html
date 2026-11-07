@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Student Marks Analyzer</h1>
+        
+        <p>Manage and analyze student performance</p>
+       
+    
+    </header>
+    <main>
+        
+        <div id="demo"></div>
+        <!-- <button id="changeBtn">Change Heading</button>
+        <button id="countBtn" type="button">count clicks</button>
+             <p id="clickCount">0</p> -->
+
+        <section class="dashboard">
+            <div class="students">
+               <h2>Total Students</h2>
+               <p id="totalStudents">0</p>
+            </div>
+
+            <div class="marks">
+            <h2>Average marks</h2>
+            <p id="averageMarks">0</p>
+            </div>
+            <div class="topper">
+            <h2>topper</h2>
+            <p id="topper">-</p>
+            </div>
+
+            <div class="passed-student">
+                <h2>Passed Student</h2>
+                <p id="passedStudents">0</p>
+
+            </div>
+
+        </section>
+
+        <section class="form-section">
+      <h2>Add New Student</h2>
+      <form id="studentForm">
+        <input type="text" id="studentName" placeholder="Enter the student name" required>
+       <input type="number" id="studentMarks" placeholder="Enter marks (0-100)" min="0" max="100" required>
+          <button type="submit">Add submit</button>
+      </form>
+        </section>
+
+<section class="student-section">
+
+    <h2>Student Records</h2>
+
+    <input type="text" id="searchInput"
+        placeholder="Search student...">
+
+    <select id="filterSelect">
+        <option value="all">All Students</option>
+        <option value="passed">Passed</option>
+        <option value="failed">Failed</option>
+    </select>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable"></tbody>
+        </table>
+    </div>
+
+</section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
